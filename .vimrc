@@ -12,4 +12,4 @@ set background=dark
 set backspace=indent,eol,start
 set autoindent
 autocmd BufWritePre * %s/\s\+$//e
-vnoremap p "_dP
+vnoremap p "_dp
