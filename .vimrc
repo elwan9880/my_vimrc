@@ -28,5 +28,5 @@ call plug#end()
 autocmd BufWritePre * %s/\s\+$//e
 " colorscheme
 colorscheme gruvbox
-" paste without ovewriting buffer
+" paste without overwriting buffer
 xnoremap p pgvy
