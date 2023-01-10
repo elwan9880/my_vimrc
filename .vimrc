@@ -1,19 +1,30 @@
 filetype indent plugin on
-syntax on
-syntax enable
-set expandtab
-set tabstop=2
-set softtabstop=2
-set shiftwidth=2
-set number
-set listchars=tab:>-,trail:~,extends:>,precedes:<
-set list
-set mouse=a
-set hlsearch
-colorscheme gruvbox
+
+set autoindent
 set background=dark
 set backspace=indent,eol,start
-set autoindent
-autocmd BufWritePre * %s/\s\+$//e
-xnoremap p pgvy
+set expandtab
+set hlsearch
+set list
+set listchars=tab:>-,trail:~,extends:>,precedes:<
+set mouse=a
+set number
+set shiftwidth=2
 set title
+
+syntax on
+syntax enable
+
+" vim-plug
+call plug#begin('~/.vim/plugged')
+Plug 'ojroques/vim-oscyank', {'branch': 'main'}
+Plug 'morhetz/gruvbox'
+Plug 'ackyshake/VimCompletesMe'
+call plug#end()
+
+" remove trailing whitespace
+autocmd BufWritePre * %s/\s\+$//e
+" colorscheme
+colorscheme gruvbox
+" paste without ovewriting buffer
+xnoremap p pgvy
