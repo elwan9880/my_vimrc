@@ -30,3 +30,5 @@ autocmd BufWritePre * %s/\s\+$//e
 colorscheme gruvbox
 " paste without overwriting buffer
 xnoremap p pgvy
+" do not autoindent comment
+autocmd FileType * set formatoptions=tnq
